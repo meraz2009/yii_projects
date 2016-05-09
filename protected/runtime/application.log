@@ -1,0 +1,1534 @@
+2016/01/28 10:15:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/sample/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2016/01/28 10:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('about')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/about
+---
+2016/01/28 10:16:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('about')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/about
+---
+2016/01/28 13:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Users".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Users')
+#1 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/sample/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Users
+HTTP_REFERER=http://local.sample.com/gii/controller/index
+---
+2016/01/28 14:57:34 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/yii/framework/web/helpers/CHtml.php(2729): CActiveRecord->__get('password')
+#2 /var/www/html/yii/framework/web/helpers/CHtml.php(2452): CHtml::resolveValue(Object(Users), 'password')
+#3 /var/www/html/yii/framework/web/helpers/CHtml.php(1808): CHtml::activeInputField('password', Object(Users), 'password', Array)
+#4 /var/www/html/yii/framework/web/widgets/CActiveForm.php(838): CHtml::activePasswordField(Object(Users), 'password', Array)
+#5 /var/www/html/sample/protected/views/users/index.php(40): CActiveForm->passwordField(Object(Users), 'password', Array)
+#6 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/s...')
+#7 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/s...', Array, true)
+#8 /var/www/html/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/s...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/html/sample/protected/controllers/UsersController.php(39): CController->render('index', Array)
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/index')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/sample/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/users/index
+---
+2016/01/28 15:41:12 [error] [php] crypt(): No salt parameter was specified. You must use a randomly generated salt and a strong hash function to produce a secure hash. (/var/www/html/sample/protected/models/Users.php:102)
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(1074): Users->beforeSave()
+#1 /var/www/html/yii/framework/db/ar/CActiveRecord.php(809): Users->insert()
+#2 /var/www/html/sample/protected/controllers/UsersController.php(32): Users->save()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): UsersController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/users/index
+in /var/www/html/sample/protected/models/Users.php (102)
+in /var/www/html/sample/protected/models/Users.php (107)
+in /var/www/html/sample/protected/controllers/UsersController.php (32)
+2016/01/28 18:04:22 [error] [php] crypt(): No salt parameter was specified. You must use a randomly generated salt and a strong hash function to produce a secure hash. (/var/www/html/sample/protected/models/Users.php:102)
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(1074): Users->beforeSave()
+#1 /var/www/html/yii/framework/db/ar/CActiveRecord.php(809): Users->insert()
+#2 /var/www/html/sample/protected/controllers/UsersController.php(32): Users->save()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): UsersController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/users/index
+in /var/www/html/sample/protected/models/Users.php (102)
+in /var/www/html/sample/protected/models/Users.php (108)
+in /var/www/html/sample/protected/controllers/UsersController.php (32)
+2016/01/28 18:12:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:12:35 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:12:43 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:12:50 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:18:00 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:23:04 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:02 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:09 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:11 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:12 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:24:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:20 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:21 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:34 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:43 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:48 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:31:50 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:42:03 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/28 18:42:10 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/sample/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2016/01/29 10:25:54 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:09 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:13 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:27 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:30 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:33 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:26:39 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:27:02 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:13 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:18 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:24 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:26 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:28 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:28:31 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:29:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:03 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:18 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:20 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:21 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:26 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:31 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:30:34 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:31:43 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:31:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "pwd_hash" violates not-null constraint
+DETAIL:  Failing row contains (5, yu, null, l, m, k@m.com, th, fghfgh, Male).. The SQL statement executed was: INSERT INTO "users" ("username", "fname", "lname", "email", "country", "address", "gender") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6). Bound with :yp0='yu', :yp1='l', :yp2='m', :yp3='k@m.com', :yp4='th', :yp5='fghfgh', :yp6='Male'.
+in /var/www/html/sample/protected/controllers/UsersController.php (35)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:31:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "pwd_hash" violates not-null constraint
+DETAIL:  Failing row contains (5, yu, null, l, m, k@m.com, th, fghfgh, Male).. The SQL statement executed was: INSERT INTO "users" ("username", "fname", "lname", "email", "country", "address", "gender") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6). Bound with :yp0='yu', :yp1='l', :yp2='m', :yp3='k@m.com', :yp4='th', :yp5='fghfgh', :yp6='Male'' in /var/www/html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /var/www/html/yii/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /var/www/html/sample/protected/controllers/UsersController.php(35): CActiveRecord->save()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/index')
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/users/index
+HTTP_REFERER=http://local.sample.com/users/index
+---
+2016/01/29 10:31:59 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:07 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:12 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:13 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:20 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:23 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:27 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "pwd_hash" violates not-null constraint
+DETAIL:  Failing row contains (6, ki, null, k, o, k@p.com, ty, sdfsdf, Male).. The SQL statement executed was: INSERT INTO "users" ("username", "fname", "lname", "email", "country", "address", "gender") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6). Bound with :yp0='ki', :yp1='k', :yp2='o', :yp3='k@p.com', :yp4='ty', :yp5='sdfsdf', :yp6='Male'.
+in /var/www/html/sample/protected/controllers/UsersController.php (35)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:32:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "pwd_hash" violates not-null constraint
+DETAIL:  Failing row contains (6, ki, null, k, o, k@p.com, ty, sdfsdf, Male).. The SQL statement executed was: INSERT INTO "users" ("username", "fname", "lname", "email", "country", "address", "gender") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6). Bound with :yp0='ki', :yp1='k', :yp2='o', :yp3='k@p.com', :yp4='ty', :yp5='sdfsdf', :yp6='Male'' in /var/www/html/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /var/www/html/yii/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /var/www/html/sample/protected/controllers/UsersController.php(35): CActiveRecord->save()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/index')
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/users/index
+HTTP_REFERER=http://local.sample.com/users/index
+---
+2016/01/29 10:32:27 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:38:19 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:38:19 [error] [php] Undefined index: pwd_hash (/var/www/html/sample/protected/controllers/UsersController.php:30)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): UsersController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/users/index
+in /var/www/html/sample/protected/controllers/UsersController.php (30)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:39:47 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:39:47 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:39:55 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:39:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:39:58 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:39:58 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:01 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:01 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:02 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:02 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:12 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:12 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:15 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:16 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:18 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:18 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:40:18 [error] [php] Undefined index: pwd_hash (/var/www/html/sample/protected/controllers/UsersController.php:30)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): UsersController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/users/index
+in /var/www/html/sample/protected/controllers/UsersController.php (30)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:41:51 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:41:51 [error] [php] Undefined index: pwd_hash (/var/www/html/sample/protected/controllers/UsersController.php:30)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): UsersController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/users/index
+in /var/www/html/sample/protected/controllers/UsersController.php (30)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:41 [warning] [application] Failed to set unsafe attribute "password" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:41 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:41 [error] [php] Undefined index: pwd_hash (/var/www/html/sample/protected/controllers/UsersController.php:30)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): UsersController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/users/index
+in /var/www/html/sample/protected/controllers/UsersController.php (30)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:44 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:51 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:54 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:42:57 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:43:04 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:43:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:43:07 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:43:08 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:45:47 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:45:54 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:01 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:03 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:03 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:09 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:10 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:12 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:46:13 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:10 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:20 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:25 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:33 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:39 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:43 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:44 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:48:45 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:50:11 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:50:14 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:25 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:34 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:37 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:38 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:39 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:43 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:45 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:46 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 10:51:47 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:19:50 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:19:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:01 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:09 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:23 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:25 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:20:30 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:25:55 [warning] [application] Failed to set unsafe attribute "password" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:25:55 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CRequiredValidator.php(58): CComponent->__get('pwd_hash')
+#1 /var/www/html/yii/framework/validators/CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#2 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 /var/www/html/sample/protected/controllers/SiteController.php(96): CModel->validate()
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#9 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/html/sample/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 11:26:34 [warning] [application] Failed to set unsafe attribute "password" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:26:34 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CRequiredValidator.php(58): CComponent->__get('pwd_hash')
+#1 /var/www/html/yii/framework/validators/CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#2 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 /var/www/html/sample/protected/controllers/SiteController.php(96): CModel->validate()
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#9 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/html/sample/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 11:26:57 [warning] [application] Failed to set unsafe attribute "password" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:26:57 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CRequiredValidator.php(58): CComponent->__get('pwd_hash')
+#1 /var/www/html/yii/framework/validators/CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#2 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 /var/www/html/sample/protected/controllers/SiteController.php(96): CModel->validate()
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#9 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/html/sample/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 11:34:21 [warning] [application] Failed to set unsafe attribute "password" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:34:21 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/web/helpers/CHtml.php(2729): CComponent->__get('password')
+#1 /var/www/html/yii/framework/web/helpers/CHtml.php(2452): CHtml::resolveValue(Object(LoginForm), 'password')
+#2 /var/www/html/yii/framework/web/helpers/CHtml.php(1808): CHtml::activeInputField('password', Object(LoginForm), 'password', Array)
+#3 /var/www/html/yii/framework/web/widgets/CActiveForm.php(838): CHtml::activePasswordField(Object(LoginForm), 'password', Array)
+#4 /var/www/html/sample/protected/views/site/login.php(35): CActiveForm->passwordField(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/s...')
+#6 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/s...', Array, true)
+#7 /var/www/html/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/s...', Array, true)
+#8 /var/www/html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#9 /var/www/html/sample/protected/controllers/SiteController.php(100): CController->render('login', Array)
+#10 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#11 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#15 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/html/sample/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 11:34:44 [warning] [application] Failed to set unsafe attribute "password" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 11:34:52 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('pwd_hash_pwd_ha...', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd_hash_pwd_ha...')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(96): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 11:36:56 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/web/helpers/CHtml.php(2729): CComponent->__get('pwd_hash')
+#1 /var/www/html/yii/framework/web/helpers/CHtml.php(2452): CHtml::resolveValue(Object(LoginForm), 'pwd_hash')
+#2 /var/www/html/yii/framework/web/helpers/CHtml.php(1808): CHtml::activeInputField('password', Object(LoginForm), 'pwd_hash', Array)
+#3 /var/www/html/yii/framework/web/widgets/CActiveForm.php(838): CHtml::activePasswordField(Object(LoginForm), 'pwd_hash', Array)
+#4 /var/www/html/sample/protected/views/site/login.php(35): CActiveForm->passwordField(Object(LoginForm), 'pwd_hash')
+#5 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/s...')
+#6 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/s...', Array, true)
+#7 /var/www/html/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/s...', Array, true)
+#8 /var/www/html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#9 /var/www/html/sample/protected/controllers/SiteController.php(100): CController->render('login', Array)
+#10 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#11 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#15 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/html/sample/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:11:10 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:15:58 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:19:10 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:14 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:23 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:25 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:26 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:19:30 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 12:20:30 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:21:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:21:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+---
+2016/01/29 12:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+---
+2016/01/29 12:21:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+---
+2016/01/29 12:21:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /var/www/html/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/sample/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/users/create
+---
+2016/01/29 12:43:07 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/web/helpers/CHtml.php(2729): CComponent->__get('password')
+#1 /var/www/html/yii/framework/web/helpers/CHtml.php(2452): CHtml::resolveValue(Object(LoginForm), 'password')
+#2 /var/www/html/yii/framework/web/helpers/CHtml.php(1808): CHtml::activeInputField('password', Object(LoginForm), 'password', Array)
+#3 /var/www/html/yii/framework/web/widgets/CActiveForm.php(838): CHtml::activePasswordField(Object(LoginForm), 'password', Array)
+#4 /var/www/html/sample/protected/views/site/login.php(35): CActiveForm->passwordField(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/s...')
+#6 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/s...', Array, true)
+#7 /var/www/html/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/s...', Array, true)
+#8 /var/www/html/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#9 /var/www/html/sample/protected/controllers/SiteController.php(104): CController->render('login', Array)
+#10 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#11 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#15 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/html/sample/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/users/index
+---
+2016/01/29 12:44:22 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('pwd_hash', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:45:04 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('pwd_hash', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:45:10 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('pwd_hash', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:49:22 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('pwd_hash', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:49:35 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/components/UserIdentity.php(21): CComponent->__get('pwd_hash')
+#1 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('pwd_hash', Array)
+#3 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#4 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/html/sample/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 12:53:21 [warning] [application] Failed to set unsafe attribute "pwd_hash" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:24:54 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(31): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 14:31:42 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(26): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 14:33:31 [error] [php] Object of class Users could not be converted to string (/var/www/html/sample/protected/components/UserIdentity.php:26)
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/html/sample/protected/controllers/SiteController.php(98): LoginForm->validate()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /var/www/html/sample/protected/components/UserIdentity.php (26)
+in /var/www/html/sample/protected/models/LoginForm.php (53)
+in /var/www/html/sample/protected/controllers/SiteController.php (98)
+2016/01/29 14:38:23 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(33): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(98): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 14:54:02 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:05 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:08 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:12 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:14 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 14:54:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 15:09:02 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(33): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(53): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(95): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 15:27:22 [error] [exception.CException] exception 'CException' with message 'UserIdentity::authenticate() must be implemented.' in /var/www/html/yii/framework/web/auth/CUserIdentity.php:57
+Stack trace:
+#0 /var/www/html/sample/protected/models/LoginForm.php(52): CUserIdentity->authenticate()
+#1 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#4 /var/www/html/sample/protected/controllers/SiteController.php(95): CModel->validate()
+#5 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#6 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#10 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /var/www/html/sample/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 15:51:03 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(31): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(95): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 15:51:49 [error] [php] Object of class Users could not be converted to string (/var/www/html/sample/protected/components/UserIdentity.php:29)
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/html/sample/protected/controllers/SiteController.php(95): LoginForm->validate()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /var/www/html/sample/protected/components/UserIdentity.php (29)
+in /var/www/html/sample/protected/models/LoginForm.php (52)
+in /var/www/html/sample/protected/controllers/SiteController.php (95)
+2016/01/29 15:52:16 [error] [php] Object of class Users could not be converted to string (/var/www/html/sample/protected/components/UserIdentity.php:29)
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/html/sample/protected/controllers/SiteController.php(95): LoginForm->validate()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /var/www/html/sample/protected/components/UserIdentity.php (29)
+in /var/www/html/sample/protected/models/LoginForm.php (52)
+in /var/www/html/sample/protected/controllers/SiteController.php (95)
+2016/01/29 15:52:21 [error] [php] Object of class Users could not be converted to string (/var/www/html/sample/protected/components/UserIdentity.php:29)
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/html/sample/protected/controllers/SiteController.php(95): LoginForm->validate()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /var/www/html/sample/protected/components/UserIdentity.php (29)
+in /var/www/html/sample/protected/models/LoginForm.php (52)
+in /var/www/html/sample/protected/controllers/SiteController.php (95)
+2016/01/29 15:56:29 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(95): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 15:58:01 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(95): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:02:28 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:02:41 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:14:52 [error] [php] Object of class Users could not be converted to string (/var/www/html/sample/protected/components/UserIdentity.php:30)
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/html/sample/protected/controllers/SiteController.php(97): LoginForm->validate()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/sample/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /var/www/html/sample/protected/components/UserIdentity.php (30)
+in /var/www/html/sample/protected/models/LoginForm.php (52)
+in /var/www/html/sample/protected/controllers/SiteController.php (97)
+2016/01/29 16:30:18 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:31:21 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:31:26 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:32:07 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 16:32:13 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/components/UserIdentity.php(32): CActiveRecord->__get('password')
+#2 /var/www/html/sample/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/sample/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 17:02:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:33 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:35 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:42 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:44 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:46 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:47 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:02:47 [error] [exception.CException] exception 'CException' with message 'Property "Users.password" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/sample/protected/models/Users.php(109): CActiveRecord->__get('password')
+#2 /var/www/html/yii/framework/db/ar/CActiveRecord.php(1074): Users->beforeSave()
+#3 /var/www/html/yii/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#4 /var/www/html/sample/protected/controllers/UsersController.php(37): CActiveRecord->save()
+#5 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionIndex()
+#6 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/index')
+#11 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /var/www/html/sample/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/users/index
+HTTP_REFERER=http://local.sample.com/users/index
+---
+2016/01/29 17:04:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (29)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:04:48 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:05:11 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/sample/protected/models/LoginForm.php(51): CComponent->__get('pwd_hash')
+#1 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#4 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#5 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#6 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#10 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /var/www/html/sample/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 17:06:04 [warning] [application] Failed to set unsafe attribute "password" of "LoginForm".
+in /var/www/html/sample/protected/controllers/SiteController.php (92)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:06:04 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.pwd_hash" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CRequiredValidator.php(58): CComponent->__get('pwd_hash')
+#1 /var/www/html/yii/framework/validators/CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'pwd_hash')
+#2 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 /var/www/html/sample/protected/controllers/SiteController.php(97): CModel->validate()
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#9 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/html/sample/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://local.sample.com/site/login
+---
+2016/01/29 17:25:26 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:25:27 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
+2016/01/29 17:25:29 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in /var/www/html/sample/protected/controllers/UsersController.php (24)
+in /var/www/html/sample/index.php (13)
